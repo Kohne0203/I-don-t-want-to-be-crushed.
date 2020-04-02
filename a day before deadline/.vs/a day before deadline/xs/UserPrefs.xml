@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{AB642E37-0FA2-8690-CD43-C2810C10B330}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Unity/Prototype2/Assets/Scripts/PlayerController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="20" Column="45" />
+      <File FileName="../../../Unity/Prototype2/Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="a day before deadline" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PlayerController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="358a4b1b-386c-460d-b0f4-ad7231b737f7" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
