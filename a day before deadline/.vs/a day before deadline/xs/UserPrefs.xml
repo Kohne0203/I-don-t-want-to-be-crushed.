@@ -1,24 +1,38 @@
-﻿<Properties StartupConfiguration="{AB642E37-0FA2-8690-CD43-C2810C10B330}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LineManager.cs">
+﻿<Properties StartupConfiguration="{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}|単体テスト">
+  <MonoDevelop.Ide.ItemProperties.UniRx.Examples PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/LineTrace/DirectionController2d.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="29" Column="10" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="50" Column="13" />
       <File FileName="Assets/Scripts/FallingObjectGenerator.cs" Line="9" Column="23" />
       <File FileName="Assets/Scripts/FallingObjectController.cs" Line="3" Column="19" />
-      <File FileName="../../../Unity/Prototype2/Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LineManager.cs" Line="72" Column="33" />
       <File FileName="Assets/Plugins/LineTrace/LineManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/LineTrace/DirectionController2d.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="a day before deadline" expanded="True" selected="True" />
+          <Node name="a day before deadline" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Assembly-CSharp-firstpass" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Plugins" expanded="True">
+                  <Node name="LineTrace" expanded="True">
+                    <Node name="DirectionController2d.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="358a4b1b-386c-460d-b0f4-ad7231b737f7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

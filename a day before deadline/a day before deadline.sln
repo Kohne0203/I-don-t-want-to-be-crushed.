@@ -1,11 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{AB642E37-0FA2-8690-CD43-C2810C10B330}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx", "UniRx.csproj", "{23CCBF71-4355-8061-1B46-0EAE822FB941}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx.Examples", "UniRx.Examples.csproj", "{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{AB642E37-0FA2-8690-CD43-C2810C10B330}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{E56D50E6-E55A-A41B-FAFF-CFCBB5402976}"
 EndProject
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23CCBF71-4355-8061-1B46-0EAE822FB941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23CCBF71-4355-8061-1B46-0EAE822FB941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23CCBF71-4355-8061-1B46-0EAE822FB941}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,6 +25,10 @@ Global
 		{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB642E37-0FA2-8690-CD43-C2810C10B330}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E56D50E6-E55A-A41B-FAFF-CFCBB5402976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E56D50E6-E55A-A41B-FAFF-CFCBB5402976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E56D50E6-E55A-A41B-FAFF-CFCBB5402976}.Release|Any CPU.ActiveCfg = Release|Any CPU

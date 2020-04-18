@@ -18,9 +18,11 @@ public class FallingObjectGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // フレーム毎に変数に値を入れてspanを超えたらインスタンスを生成する
         this.delta += Time.deltaTime;
         if (this.delta > this.span)
         {
+            // 生成する際にdeltaをリセットする
             this.delta = 0;
             
             GameObject go = Instantiate(fallingPrefab) as GameObject;
