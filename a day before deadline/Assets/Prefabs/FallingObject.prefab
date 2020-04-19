@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2383798520664929742}
   - component: {fileID: 2383798520664929737}
   - component: {fileID: 2383798520664929736}
-  - component: {fileID: 2383798520664929739}
+  - component: {fileID: 1798354441103712272}
   m_Layer: 0
   m_Name: FallingObject
   m_TagString: Untagged
@@ -108,7 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 5
---- !u!54 &2383798520664929739
+  waitTime: 3
+  rb: {fileID: 1798354441103712272}
+--- !u!54 &1798354441103712272
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
