@@ -16,7 +16,7 @@ public class FallingObjectGenerator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // フレーム毎に変数に値を入れてspanを超えたらインスタンスを生成する
         this.delta += Time.deltaTime;

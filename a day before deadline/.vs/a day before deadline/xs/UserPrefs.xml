@@ -1,10 +1,11 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}|単体テスト">
   <MonoDevelop.Ide.ItemProperties.UniRx.Examples PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FallingObjectController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIController.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="50" Column="13" />
       <File FileName="Assets/Scripts/FallingObjectGenerator.cs" Line="9" Column="23" />
-      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="3" Column="19" />
+      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="21" Column="6" />
+      <File FileName="Assets/Scripts/UIController.cs" Line="7" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,17 +14,11 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="FallingObjectController.cs" selected="True" />
+                  <Node name="UIController.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
-            <Node name="Assembly-CSharp-firstpass" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Plugins" expanded="True">
-                  <Node name="LineTrace" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
+            <Node name="Assembly-CSharp-firstpass" expanded="True" />
           </Node>
         </State>
       </Pad>
