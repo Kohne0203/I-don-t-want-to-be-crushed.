@@ -6,15 +6,21 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     GameObject timeUi;
-    GameObject gameUi;
+    GameObject stageUi;
     float time = 0f;
+    Color White = new Color(1, 1, 1, 1);
     
     
     // Start is called before the first frame update
     void Start()
     {
         this.timeUi = GameObject.Find("RunTime");
-        this.gameUi = GameObject.Find("Current Stage");
+        this.stageUi = GameObject.Find("Current Stage");
+
+        Text timeText = this.timeUi.GetComponent<Text>();
+        Text stageText = this.stageUi.GetComponent<Text>();
+        timeText.color = White;
+        stageText.color = White;
     }
 
     // Update is called once per frame
