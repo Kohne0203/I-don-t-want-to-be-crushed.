@@ -5,7 +5,7 @@ using LineTrace;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 8.0f;
     public float horizontalInput;
     public float xRange = 7.0f;
     public DirectionController2d controller;
