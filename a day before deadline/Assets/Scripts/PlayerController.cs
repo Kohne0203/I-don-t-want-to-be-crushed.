@@ -13,11 +13,10 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Vector3 playerPos;
     
-    
-
+ 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
         playerPos = GetComponent<Transform>().position;
         animator = GetComponent<Animator>();
         animator.SetBool("Running", true);
@@ -36,15 +35,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
 
-        Vector3 posDiff = transform.position - playerPos;
-        if (posDiff.magnitude != 0)
-        {
-            Debug.Log(posDiff);
-        }
-
-        //horizontalInput = Input.GetAxis("Horizontal");
-        //transform.Translate(Vector3.forward * horizontalInput * Time.deltaTime * speed);
-
+        // 方向キーの移動設定
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             controller.direction = Direction.back;
@@ -57,9 +48,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // 落下オブジェクトに当たったら
     private void OnTriggerEnter(Collider other)
     {
-    
+
     }
 
     private void OnCollisionStay(Collision collision)

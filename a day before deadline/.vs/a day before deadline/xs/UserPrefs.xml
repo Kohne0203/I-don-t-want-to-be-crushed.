@@ -2,13 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.UniRx.Examples PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="64" Column="9" />
       <File FileName="Assets/Scripts/FallingObjectGenerator.cs" />
-      <File FileName="Assets/Scripts/FallingObjectController.cs" />
+      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="21" Column="6" />
       <File FileName="Assets/Scripts/UIController.cs" Line="33" Column="1" />
-      <File FileName="Packages/manifest.json" />
-      <File FileName="Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="10" Column="9" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="19" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,9 +15,13 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="GameManager.cs" selected="True" />
+                  <Node name="PlayerController.cs" selected="True" />
                 </Node>
-                <Node name="unity-chan!" expanded="True" />
+                <Node name="unity-chan!" expanded="True">
+                  <Node name="Unity-chan! Model" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
             </Node>
             <Node name="Assembly-CSharp-Editor" expanded="True">

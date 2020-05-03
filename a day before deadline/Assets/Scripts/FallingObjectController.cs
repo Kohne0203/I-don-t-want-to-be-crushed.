@@ -7,10 +7,14 @@ public class FallingObjectController : MonoBehaviour
     public float fallSpeed = 5.0f;
     public float waitTime = 3;
     public Rigidbody rb;
+    GameObject character;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        character = GameObject.Find("unitychan");
         rb.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         Invoke("Fall", waitTime);
@@ -30,6 +34,13 @@ public class FallingObjectController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.tag == "Player")
+        {
+            gameManager.GameOver();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
