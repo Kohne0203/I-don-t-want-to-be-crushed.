@@ -5,7 +5,7 @@ using UnityEngine;
 public class FallingObjectGenerator : MonoBehaviour
 {
 
-    public GameObject fallingPrefab;
+    public GameObject[] Train;
     float span = 3.0f;
     float delta = 0;
 
@@ -18,6 +18,8 @@ public class FallingObjectGenerator : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        var number = Random.Range(0, Train.Length);
+
         // フレーム毎に変数に値を入れてspanを超えたらインスタンスを生成する
         this.delta += Time.deltaTime;
         if (this.delta > this.span)
@@ -25,11 +27,11 @@ public class FallingObjectGenerator : MonoBehaviour
             // 生成する際にdeltaをリセットする
             this.delta = 0;
             
-            GameObject go = Instantiate(fallingPrefab) as GameObject;
+            GameObject go = Instantiate(Train[number]) as GameObject;
 
             // 出現範囲をランダムで生成
             int respawnRange = Random.Range(-10, 10);
-            go.transform.position = new Vector3(respawnRange, 6, 0);
+            go.transform.position = new Vector3(respawnRange, 10, 0);
 
         }
     }
