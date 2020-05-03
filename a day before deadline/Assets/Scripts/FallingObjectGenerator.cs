@@ -30,7 +30,7 @@ public class FallingObjectGenerator : MonoBehaviour
             GameObject go = Instantiate(Train[number]) as GameObject;
 
             // 出現範囲をランダムで生成
-            int respawnRange = Random.Range(-10, 10);
+            int respawnRange = Random.Range(-7, 7);
             go.transform.position = new Vector3(respawnRange, 10, 0);
 
         }
