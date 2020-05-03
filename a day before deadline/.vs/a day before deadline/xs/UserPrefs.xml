@@ -1,29 +1,42 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Packages/manifest.json">
+﻿<Properties StartupConfiguration="{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}|単体テスト">
+  <MonoDevelop.Ide.ItemProperties.UniRx.Examples PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="27" Column="23" />
-      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" Line="19" Column="15" />
-      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="21" Column="6" />
-      <File FileName="Assets/Scripts/UIController.cs" Line="16" Column="6" />
-      <File FileName="Packages/manifest.json" Line="41" Column="75" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" />
+      <File FileName="Assets/Scripts/FallingObjectController.cs" />
+      <File FileName="Assets/Scripts/UIController.cs" Line="33" Column="1" />
+      <File FileName="Packages/manifest.json" />
+      <File FileName="Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="10" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="a day before deadline" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True" />
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="GameManager.cs" selected="True" />
+                </Node>
+                <Node name="unity-chan!" expanded="True" />
+              </Node>
             </Node>
-            <Node name="Assembly-CSharp-firstpass" expanded="True" />
+            <Node name="Assembly-CSharp-Editor" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="unity-chan!" expanded="True">
+                  <Node name="Unity-chan! Model" expanded="True">
+                    <Node name="Editor" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
             <Node name="UniRx" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Plugins" expanded="True">
                   <Node name="UniRx" expanded="True">
                     <Node name="Scripts" expanded="True">
-                      <Node name="UnityEngineBridge" expanded="True">
-                        <Node name="Triggers" expanded="True" />
-                        <Node name="ObservableWWW.cs" selected="True" />
-                      </Node>
+                      <Node name="UnityEngineBridge" expanded="True" />
                     </Node>
                   </Node>
                 </Node>
