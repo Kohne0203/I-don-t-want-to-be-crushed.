@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
         gameOverCanvasClone = Instantiate(gameOverCanvasPrefab);
         buttons = gameOverCanvasClone.GetComponentsInChildren<Button>();
         buttons[0].onClick.AddListener(Retry);
-        
     }
 
     // リトライ処理

@@ -8,6 +8,7 @@ public class FallingObjectGenerator : MonoBehaviour
     public GameObject[] Train;
     float span = 3.0f;
     float delta = 0;
+    public Vector3 playerPos;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class FallingObjectGenerator : MonoBehaviour
     void FixedUpdate()
     {
         var number = Random.Range(0, Train.Length);
+        playerPos = GameObject.Find("unitychan").GetComponent<Transform>().position;
 
         // フレーム毎に変数に値を入れてspanを超えたらインスタンスを生成する
         this.delta += Time.deltaTime;
@@ -31,8 +33,8 @@ public class FallingObjectGenerator : MonoBehaviour
 
             // 出現範囲をランダムで生成
             int respawnRange = Random.Range(-7, 7);
-            go.transform.position = new Vector3(respawnRange, 10, 0);
-
+            print(playerPos);
+            go.transform.position = new Vector3(playerPos.x, 10, 0);
         }
     }
 }
