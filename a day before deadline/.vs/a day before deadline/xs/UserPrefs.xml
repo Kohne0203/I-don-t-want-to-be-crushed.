@@ -1,13 +1,12 @@
-﻿<Properties StartupConfiguration="{C21EA0D5-0603-BAF7-B07E-B4CEE7138B16}|単体テスト">
+﻿<Properties>
   <MonoDevelop.Ide.ItemProperties.UniRx.Examples PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AudioController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="37" Column="1" />
-      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" Line="37" Column="69" />
-      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="32" Column="31" />
-      <File FileName="Assets/Scripts/UIController.cs" Line="33" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="38" Column="47" />
-      <File FileName="Assets/Scripts/AudioController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" />
+      <File FileName="Assets/Scripts/FallingObjectController.cs" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="47" Column="21" />
+      <File FileName="Assets/Scripts/AudioController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

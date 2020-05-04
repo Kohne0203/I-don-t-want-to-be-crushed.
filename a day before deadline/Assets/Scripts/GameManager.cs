@@ -9,6 +9,14 @@ public class GameManager : MonoBehaviour
     GameObject character;
     string sceneName;
 
+    // UI関連
+    GameObject timeUi;
+    GameObject stageUi;
+    float time = 0f;
+    Color White = new Color(1, 1, 1, 1);
+    int stageNum = 1;
+
+    // ゲームオーバー関連
     [SerializeField]
     GameObject gameOverCanvasPrefab;
     GameObject gameOverCanvasClone;
@@ -19,12 +27,27 @@ public class GameManager : MonoBehaviour
     {
         sceneName = SceneManager.GetActiveScene().name;
         character = GameObject.Find("unitychan");
+
+        // UIを設定
+        this.timeUi = GameObject.Find("RunTime");
+        this.stageUi = GameObject.Find("CurrentStage");
+
+        Text timeText = this.timeUi.GetComponent<Text>();
+        Text stageText = this.stageUi.GetComponent<Text>();
+
+        stageText.text = "Stage " + stageNum;
+
+        timeText.color = White;
+        stageText.color = White;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        // timeUIの更新
+        this.time += Time.deltaTime;
+        this.timeUi.GetComponent<Text>().text = this.time.ToString("F1") + "s";
+
     }
 
     // ゲームオーバー処理
