@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
     // UI関連
     GameObject timeUi;
     GameObject stageUi;
-    float time = 0f;
+    private float time = 0f;
     Color White = new Color(1, 1, 1, 1);
-    int stageNum = 1;
+    static int stageNum;
 
     // ゲームオーバー関連
     [SerializeField]
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stageNum += 1;
         sceneName = SceneManager.GetActiveScene().name;
         character = GameObject.Find("unitychan");
 
@@ -45,10 +46,21 @@ public class GameManager : MonoBehaviour
     void FixedUpdate()
     {
         // timeUIの更新
-        this.time += Time.deltaTime;
-        this.timeUi.GetComponent<Text>().text = this.time.ToString("F1") + "s";
+        time += Time.deltaTime;
+        timeUi.GetComponent<Text>().text = this.time.ToString("F1") + "s";
 
+        if (time >= 30.0f)
+        {
+            print("ステージクリア");
+            StageMove();
+        }
     }
+
+    public void StageMove()
+    {
+        SceneManager.LoadScene("Stage2");
+    }
+
 
     // ゲームオーバー処理
     public void GameOver()
