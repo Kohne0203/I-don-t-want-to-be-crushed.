@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.ItemProperties.UniRx.Examples PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TitleManager.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="37" Column="1" />
       <File FileName="Assets/Scripts/FallingObjectGenerator.cs" />
       <File FileName="Assets/Scripts/FallingObjectController.cs" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="28" Column="22" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="42" Column="33" />
       <File FileName="Assets/Scripts/AudioController.cs" />
+      <File FileName="Assets/Scripts/TitleManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

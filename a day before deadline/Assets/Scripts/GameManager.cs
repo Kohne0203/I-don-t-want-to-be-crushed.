@@ -71,13 +71,20 @@ public class GameManager : MonoBehaviour
         gameOverCanvasClone = Instantiate(gameOverCanvasPrefab);
         buttons = gameOverCanvasClone.GetComponentsInChildren<Button>();
         buttons[0].onClick.AddListener(Retry);
+        buttons[1].onClick.AddListener(BackToTitle);
     }
 
     // リトライ処理
     public void Retry()
     {
         Destroy(gameOverCanvasClone);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Stage1");
         Time.timeScale = 1.0f;
+    }
+
+    public void BackToTitle()
+    {
+        Destroy(gameOverCanvasClone);
+        SceneManager.LoadScene("Title");
     }
 }
