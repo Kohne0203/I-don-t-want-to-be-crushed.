@@ -14,7 +14,14 @@ public class GameManager : MonoBehaviour
     GameObject stageUi;
     private float time = 0f;
     Color White = new Color(1, 1, 1, 1);
-    static int stageNum;
+    public static int stageNum = 0;
+    private float goalTime = 10f;
+
+    [SerializeField]
+    GameObject clearCanvasPrefab;
+    GameObject clearCanvasClone;
+    Text[] cleartext;
+    
 
     // ゲームオーバー関連
     [SerializeField]
@@ -49,23 +56,26 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         timeUi.GetComponent<Text>().text = this.time.ToString("F1") + "s";
 
-        if (time >= 30.0f)
+        if (Time.time == goalTime)
         {
             print("ステージクリア");
-            StageMove();
+            StageClear();
         }
     }
 
-    public void StageMove()
-    {
-        SceneManager.LoadScene("Stage2");
+    public void StageClear()
+    {     
+        timeUi.SetActive(false);
+        stageUi.SetActive(false);
+        clearCanvasClone = Instantiate(clearCanvasPrefab);     
     }
-
 
     // ゲームオーバー処理
     public void GameOver()
     {
         character.SetActive(false);
+        Destroy(timeUi);
+        Destroy(stageUi);
         Time.timeScale = 0;
 
         gameOverCanvasClone = Instantiate(gameOverCanvasPrefab);
@@ -79,9 +89,11 @@ public class GameManager : MonoBehaviour
     {
         Destroy(gameOverCanvasClone);
         SceneManager.LoadScene("Stage1");
+        stageNum = 0;
         Time.timeScale = 1.0f;
     }
 
+    // タイトルに戻る
     public void BackToTitle()
     {
         Destroy(gameOverCanvasClone);

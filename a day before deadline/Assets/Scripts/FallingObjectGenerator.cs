@@ -37,4 +37,9 @@ public class FallingObjectGenerator : MonoBehaviour
             go.transform.position = new Vector3(playerPos.x, 10, 0);
         }
     }
+
+    public void GenerateDestroy()
+    {
+
+    }
 }

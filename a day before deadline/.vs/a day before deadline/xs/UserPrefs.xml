@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TitleManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NewBehaviourScript.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="37" Column="1" />
-      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" />
-      <File FileName="Assets/Scripts/FallingObjectController.cs" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="42" Column="33" />
-      <File FileName="Assets/Scripts/AudioController.cs" />
-      <File FileName="Assets/Scripts/TitleManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" Line="43" Column="1" />
+      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="32" Column="31" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="42" Column="18" />
+      <File FileName="Assets/Scripts/AudioController.cs" Line="10" Column="9" />
+      <File FileName="Assets/Scripts/TitleManager.cs" Line="20" Column="50" />
+      <File FileName="Assets/Scripts/NewBehaviourScript.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,33 +18,13 @@
                 <Node name="Scripts" expanded="True">
                   <Node name="GameManager.cs" selected="True" />
                 </Node>
-                <Node name="unity-chan!" expanded="True">
-                  <Node name="Unity-chan! Model" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                </Node>
+                <Node name="unity-chan!" expanded="True" />
               </Node>
             </Node>
             <Node name="Assembly-CSharp-Editor" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="unity-chan!" expanded="True">
-                  <Node name="Unity-chan! Model" expanded="True">
-                    <Node name="Editor" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
+              <Node name="Assets" expanded="True" />
             </Node>
-            <Node name="UniRx" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Plugins" expanded="True">
-                  <Node name="UniRx" expanded="True">
-                    <Node name="Scripts" expanded="True">
-                      <Node name="UnityEngineBridge" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
+            <Node name="UniRx" expanded="True" />
           </Node>
         </State>
       </Pad>

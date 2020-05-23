@@ -361,6 +361,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &394390572
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_Name
+      value: road_straight_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
 --- !u!1 &419978649
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +584,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7745dadc2ddc04616aa31d57da1af87a, type: 3}
-    m_FontSize: 32
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1078,6 +1135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd7dac51e430492ab9a055115ff23e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clearCanvasPrefab: {fileID: 8509527211097184556, guid: 71483e65c89e34f8b91bab5256f24bcc,
+    type: 3}
   gameOverCanvasPrefab: {fileID: 7842048688673688479, guid: ad83c8aa71597481ea490bd53ff75637,
     type: 3}
 --- !u!1 &1439158307
@@ -1233,7 +1292,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7745dadc2ddc04616aa31d57da1af87a, type: 3}
-    m_FontSize: 34
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1351,7 +1410,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9b1484290c27546c3966e0c8002609f7, type: 2}
+  - {fileID: 2100000, guid: fd0d7e85b8c8e45bfb53bdcc320b2497, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
