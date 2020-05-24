@@ -214,7 +214,7 @@ RectTransform:
   - {fileID: 1531525493}
   - {fileID: 610881463}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -635,7 +635,7 @@ Transform:
   - {fileID: 1163385046}
   - {fileID: 1481638159}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &615704178
 MonoBehaviour:
@@ -684,7 +684,7 @@ Transform:
   - {fileID: 895423282}
   - {fileID: 419978650}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826566802
 GameObject:
@@ -727,7 +727,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &895423281
 GameObject:
@@ -1121,7 +1121,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1261800436
 MonoBehaviour:
@@ -1135,6 +1135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd7dac51e430492ab9a055115ff23e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalTime: 30
+  stageCanvasPrefab: {fileID: 1739151534746088567, guid: 617e29075b2094015a8c74b6efb37979,
+    type: 3}
   clearCanvasPrefab: {fileID: 8509527211097184556, guid: 71483e65c89e34f8b91bab5256f24bcc,
     type: 3}
   gameOverCanvasPrefab: {fileID: 7842048688673688479, guid: ad83c8aa71597481ea490bd53ff75637,
@@ -1203,7 +1206,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481638158
 GameObject:
@@ -1358,7 +1361,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915564190
 GameObject:

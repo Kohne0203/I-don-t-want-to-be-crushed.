@@ -20,6 +20,5 @@ public class SceneController : MonoBehaviour
     public void MoveStage()
     {
         SceneManager.LoadScene(1);
-
     }
 }

@@ -15,13 +15,16 @@ public class GameManager : MonoBehaviour
     private float time = 0f;
     Color White = new Color(1, 1, 1, 1);
     public static int stageNum = 0;
-    private float goalTime = 10f;
+    public float goalTime = 5f;
+
+    [SerializeField]
+    GameObject stageCanvasPrefab;
+    GameObject stageCanvasClone;
+    Text startCutin;
 
     [SerializeField]
     GameObject clearCanvasPrefab;
     GameObject clearCanvasClone;
-    Text[] cleartext;
-    
 
     // ゲームオーバー関連
     [SerializeField]
@@ -47,6 +50,11 @@ public class GameManager : MonoBehaviour
 
         timeText.color = White;
         stageText.color = White;
+
+        // カットイン演出
+        stageCanvasClone = Instantiate(stageCanvasPrefab);
+        startCutin = stageCanvasClone.GetComponentInChildren<Text>();
+        startCutin.text = stageText.text;
     }
 
     // Update is called once per frame
@@ -67,7 +75,7 @@ public class GameManager : MonoBehaviour
     {     
         timeUi.SetActive(false);
         stageUi.SetActive(false);
-        clearCanvasClone = Instantiate(clearCanvasPrefab);     
+        clearCanvasClone = Instantiate(clearCanvasPrefab);
     }
 
     // ゲームオーバー処理
