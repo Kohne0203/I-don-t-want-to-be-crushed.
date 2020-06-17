@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TitleManager : MonoBehaviour
 {
     Button startButton;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,9 @@ public class TitleManager : MonoBehaviour
     {
         startButton.onClick.AddListener(GameStart);
     }
-    public void GameStart()
+
+    void GameStart()
     {
         SceneManager.LoadScene("Stage1");
     }
-
 }

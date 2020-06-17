@@ -9,11 +9,12 @@ public class FallingObjectGenerator : MonoBehaviour
     float span = 3.0f;
     float delta = 0;
     public Vector3 playerPos;
+    public int invokeTime = 3;
+    public GameManager Manager;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("FixedUpdate", invokeTime);
     }
 
     // Update is called once per frame
@@ -31,10 +32,17 @@ public class FallingObjectGenerator : MonoBehaviour
             
             GameObject go = Instantiate(Train[number]) as GameObject;
 
-            // 出現範囲をランダムで生成
-            int respawnRange = Random.Range(-7, 7);
-            print(playerPos);
-            go.transform.position = new Vector3(playerPos.x, 10, 0);
+            if (Manager.gameState == GameManager.GameState.Gaming)
+            {
+                // 出現範囲をランダムで生成
+                int respawnRange = Random.Range(-7, 7);
+                go.transform.position = new Vector3(playerPos.x, 10, 0);
+            }
+            else if (Manager.gameState == GameManager.GameState.MoveStage)
+            {
+                print("ステージ移動中");
+                Destroy(go);
+            }
         }
     }
 

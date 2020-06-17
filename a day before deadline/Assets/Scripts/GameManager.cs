@@ -3,19 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
     GameObject character;
     string sceneName;
 
+    public GameState gameState;
+    public enum GameState
+    {
+        Gaming,
+        MoveStage,
+        Result
+    }
+
     // UI関連
     GameObject timeUi;
     GameObject stageUi;
-    private float time = 0f;
+    private float timer = 0f;
+
     Color White = new Color(1, 1, 1, 1);
+
     public static int stageNum = 0;
-    public float goalTime = 5f;
+    public float firstGoalTime = 30f;
+    public float secondGoalTime = 60f;
 
     [SerializeField]
     GameObject stageCanvasPrefab;
@@ -31,7 +43,7 @@ public class GameManager : MonoBehaviour
     GameObject gameOverCanvasPrefab;
     GameObject gameOverCanvasClone;
     Button[] buttons;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -44,35 +56,48 @@ public class GameManager : MonoBehaviour
         this.stageUi = GameObject.Find("CurrentStage");
 
         Text timeText = this.timeUi.GetComponent<Text>();
-        Text stageText = this.stageUi.GetComponent<Text>();
-
-        stageText.text = "Stage " + stageNum;
-
         timeText.color = White;
-        stageText.color = White;
-
-        // カットイン演出
-        stageCanvasClone = Instantiate(stageCanvasPrefab);
-        startCutin = stageCanvasClone.GetComponentInChildren<Text>();
-        startCutin.text = stageText.text;
+       
+        StageNumCutIn();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        // timeUIの更新
-        time += Time.deltaTime;
-        timeUi.GetComponent<Text>().text = this.time.ToString("F1") + "s";
+        Text stageText = this.stageUi.GetComponent<Text>();
+        stageText.text = "Stage" + stageNum;
+        stageText.color = White;
 
-        if (Time.time == goalTime)
+        // timeUIの更新
+        timer += Time.deltaTime;
+        timeUi.GetComponent<Text>().text = this.timer.ToString("F1") + "s";
+
+        if (Time.time == firstGoalTime)
         {
-            print("ステージクリア");
             StageClear();
-        }
+            StageNumCutIn();
+            Invoke("StageReset", 2);
+        };
     }
 
     public void StageClear()
-    {     
+    {
+        stageNum += 1;
+        gameState = GameState.MoveStage;
+        timeUi.SetActive(false);
+        stageUi.SetActive(false);
+    }
+
+
+    public void StageReset()
+    {
+        gameState = GameState.Gaming;
+        timeUi.SetActive(true);
+        stageUi.SetActive(true);
+    }
+
+    public void MoveFinalStage()
+    {
         timeUi.SetActive(false);
         stageUi.SetActive(false);
         clearCanvasClone = Instantiate(clearCanvasPrefab);
@@ -92,6 +117,14 @@ public class GameManager : MonoBehaviour
         buttons[1].onClick.AddListener(BackToTitle);
     }
 
+    // カットイン演出
+    public void StageNumCutIn()
+    {
+        stageCanvasClone = Instantiate(stageCanvasPrefab);
+        startCutin = stageCanvasClone.GetComponentInChildren<Text>();
+        startCutin.text = "Stage" + stageNum;
+    }
+
     // リトライ処理
     public void Retry()
     {
@@ -106,5 +139,10 @@ public class GameManager : MonoBehaviour
     {
         Destroy(gameOverCanvasClone);
         SceneManager.LoadScene("Title");
+    }
+
+    void GameClear()
+    {
+        print("ゲームクリア");
     }
 }
