@@ -18,11 +18,11 @@ public class VariableManager : MonoBehaviour
         get {
             if (gameManager.currentStage == GameManager.GameStage.Stage1)
             {
-                return 5.0f;
+                return 30.0f;
             }
             else if (gameManager.currentStage == GameManager.GameStage.Stage2)
             {
-                return 15.0f;
+                return 60.0f;
             }
             else if (gameManager.currentStage == GameManager.GameStage.Stage3)
             {
