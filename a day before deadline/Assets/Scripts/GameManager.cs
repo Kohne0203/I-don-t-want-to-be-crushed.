@@ -4,18 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using System;
 
 public class GameManager : MonoBehaviour
 {
+    public VariableManager variable;
     GameObject character;
-    string sceneName;
 
-    public GameState gameState;
+    // ゲーム状態
+    public GameState currentGameState;
     public enum GameState
     {
         Gaming,
         MoveStage,
         Result
+    }
+
+    // ステージ設定
+    public GameStage currentStage;
+    public enum GameStage
+    {
+        Stage1,
+        Stage2,
+        Stage3
     }
 
     // UI関連
@@ -25,9 +36,8 @@ public class GameManager : MonoBehaviour
 
     Color White = new Color(1, 1, 1, 1);
 
-    public static int stageNum = 0;
-    public float firstGoalTime = 30f;
-    public float secondGoalTime = 60f;
+    private float goalTime;
+    private int stageNum;
 
     [SerializeField]
     GameObject stageCanvasPrefab;
@@ -47,8 +57,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stageNum += 1;
-        sceneName = SceneManager.GetActiveScene().name;
+        SetStage(GameStage.Stage1);
         character = GameObject.Find("unitychan");
 
         // UIを設定
@@ -57,13 +66,12 @@ public class GameManager : MonoBehaviour
 
         Text timeText = this.timeUi.GetComponent<Text>();
         timeText.color = White;
-       
-        StageNumCutIn();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        // stageUIの更新
         Text stageText = this.stageUi.GetComponent<Text>();
         stageText.text = "Stage" + stageNum;
         stageText.color = White;
@@ -72,35 +80,66 @@ public class GameManager : MonoBehaviour
         timer += Time.deltaTime;
         timeUi.GetComponent<Text>().text = this.timer.ToString("F1") + "s";
 
-        if (Time.time == firstGoalTime)
+        if (Time.time == goalTime)
         {
+            SetCurrentState(GameState.MoveStage);
             StageClear();
-            StageNumCutIn();
-            Invoke("StageReset", 2);
         };
     }
 
+    // 次のステージの準備処理
+    public void SetStage(GameStage stage)
+    {
+        currentStage = stage;
+        SetCurrentState(GameState.Gaming);
+        StageNumCutIn();
+        goalTime = variable.GoalTime;
+    }
+
+    public void SetCurrentState(GameState state)
+    {
+        currentGameState = state;
+    }
+
+    void OnGameStageChanged(GameStage currentStage)
+    {
+        switch (currentStage)
+        {
+            case GameStage.Stage1:
+                SetStage(GameStage.Stage2);
+                MoveStage();
+                break;
+            case GameStage.Stage2:
+                SetStage(GameStage.Stage3);
+                MoveStage();
+                break;
+            case GameStage.Stage3:
+
+                break;
+            default:
+                break;
+        }
+    }
+
+    // ステージクリア演出
     public void StageClear()
-    {
-        stageNum += 1;
-        gameState = GameState.MoveStage;
-        timeUi.SetActive(false);
-        stageUi.SetActive(false);
-    }
-
-
-    public void StageReset()
-    {
-        gameState = GameState.Gaming;
-        timeUi.SetActive(true);
-        stageUi.SetActive(true);
-    }
-
-    public void MoveFinalStage()
     {
         timeUi.SetActive(false);
         stageUi.SetActive(false);
         clearCanvasClone = Instantiate(clearCanvasPrefab);
+
+        // クリア演出をした後にステージ移行をする
+        StartCoroutine(DelayMethod(2.0f, () =>
+        {
+            OnGameStageChanged(currentStage);
+        }));
+    }
+
+
+    public void MoveStage()
+    {
+        timeUi.SetActive(true);
+        stageUi.SetActive(true);
     }
 
     // ゲームオーバー処理
@@ -120,6 +159,7 @@ public class GameManager : MonoBehaviour
     // カットイン演出
     public void StageNumCutIn()
     {
+        stageNum = variable.StageNum;
         stageCanvasClone = Instantiate(stageCanvasPrefab);
         startCutin = stageCanvasClone.GetComponentInChildren<Text>();
         startCutin.text = "Stage" + stageNum;
@@ -144,5 +184,17 @@ public class GameManager : MonoBehaviour
     void GameClear()
     {
         print("ゲームクリア");
+    }
+
+    /// <summary>
+    /// 渡された処理を指定時間後に実行する
+    /// </summary>
+    /// <param name="waitTime">遅延時間[ミリ秒]</param>
+    /// <param name="action">実行したい処理</param>
+    /// <returns></returns>
+    private IEnumerator DelayMethod(float waitTime, Action action)
+    {
+        yield return new WaitForSeconds(waitTime);
+        action();
     }
 }

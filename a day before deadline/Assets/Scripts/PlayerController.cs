@@ -5,18 +5,19 @@ using LineTrace;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 8.0f;
+    float speed;
     public float horizontalInput;
     public float xRange = 7.0f;
     public DirectionController2d controller;
+    public VariableManager variable;
 
     private Animator animator;
     private Vector3 playerPos;
     
- 
     // Start is called before the first frame update
     void Start()
     {
+        
         playerPos = GetComponent<Transform>().position;
         animator = GetComponent<Animator>();
         animator.SetBool("Running", true);
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        speed = variable.PlayerSpeed;
 
         if (transform.position.x > xRange)
         {

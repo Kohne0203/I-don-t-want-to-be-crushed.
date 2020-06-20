@@ -1,0 +1,156 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class VariableManager : MonoBehaviour
+{
+    // 各変数,プロパティをまとめるスクリプト
+
+    public GameManager gameManager;
+
+    // GameManager関連
+
+    private float goalTime;
+    private int stageNum;
+
+    public float GoalTime
+    {
+        get {
+            if (gameManager.currentStage == GameManager.GameStage.Stage1)
+            {
+                return 5.0f;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage2)
+            {
+                return 15.0f;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            {
+                return 100.0f;
+            }
+            else
+            {
+                return this.goalTime;
+            }
+        }
+        private set { this.goalTime = value; }
+    }
+
+    public int StageNum
+    {
+        get
+        {
+            if (gameManager.currentStage == GameManager.GameStage.Stage1)
+            {
+                return 1;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage2)
+            {
+                return 2;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            {
+                return 3;
+            }
+            else
+            {
+                return this.stageNum;
+            }
+        }
+        private set { this.stageNum = value; }
+    }
+
+    // Player関連
+
+    private float playerSpeed = 10.0f;
+
+    public float PlayerSpeed
+    {
+        get
+        {
+            if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            {
+                return 7.0f;
+            }
+
+            return this.playerSpeed;
+        }
+        private set { this.playerSpeed = value; }
+    }
+
+    // FallingObject関連
+
+    private float fallSpan = 3.0f;
+    private int invokeTime = 3;
+    private float fallSpeed = 5.0f;
+    private float waitTime = 3.0f;
+
+    public float FallSpan
+    {
+        get
+        {
+            if (gameManager.currentStage == GameManager.GameStage.Stage1)
+            {
+                return 3.0f;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage2)
+            {
+                return 2.0f;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            {
+                return 1.0f;
+            }
+            else
+            {
+                return this.fallSpan;
+            }
+        }
+        private set { this.fallSpan = value; }
+    }
+
+    public int InvokeTime
+    {
+        get { return this.invokeTime; }
+        private set { this.invokeTime = value; }
+    }
+
+    public float FallSpeed
+    {
+        get
+        {
+            if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            {
+                float random = Random.Range(3.0f, 10.0f);
+                return random;
+            }
+
+            return this.fallSpeed;
+        }
+        private set { this.fallSpeed = value; }
+    }
+
+    public float WaitTime
+    {
+        get
+        {
+            if (gameManager.currentStage == GameManager.GameStage.Stage1)
+            {
+                return 3.0f;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage2)
+            {
+                return 2.0f;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            {
+                return 1.0f;
+            }
+            else
+            {
+                return this.fallSpan;
+            }
+        }
+        private set { this.waitTime = value; }
+    }
+}

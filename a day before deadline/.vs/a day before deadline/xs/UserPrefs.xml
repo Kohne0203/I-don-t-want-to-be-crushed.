@@ -1,13 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="56" Column="1" />
-      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" Line="43" Column="1" />
-      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="32" Column="31" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scripts/AudioController.cs" Line="10" Column="9" />
-      <File FileName="Assets/Scripts/TitleManager.cs" Line="25" Column="40" />
-      <File FileName="Assets/Scripts/NewBehaviourScript.cs" Line="22" Column="9" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="16" Column="5" IsPinned="True" />
+      <File FileName="Assets/Scripts/VariableManager.cs" Line="54" Column="1" />
+      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" />
+      <File FileName="Assets/Scripts/FallingObjectController.cs" />
+      <File FileName="Assets/Scripts/GameManager.cs" />
+      <File FileName="Assets/Scripts/AudioController.cs" />
+      <File FileName="Assets/Scripts/TitleManager.cs" />
+      <File FileName="Assets/Scripts/SceneController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,15 +17,11 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="SceneController.cs" selected="True" />
+                  <Node name="PlayerController.cs" selected="True" />
                 </Node>
                 <Node name="unity-chan!" expanded="True" />
               </Node>
             </Node>
-            <Node name="Assembly-CSharp-Editor" expanded="True">
-              <Node name="Assets" expanded="True" />
-            </Node>
-            <Node name="UniRx" expanded="True" />
           </Node>
         </State>
       </Pad>
