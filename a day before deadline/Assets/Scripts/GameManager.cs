@@ -36,7 +36,8 @@ public class GameManager : MonoBehaviour
 
     Color White = new Color(1, 1, 1, 1);
 
-    private float goalTime;
+    private int goalCount;
+    public int surviveCount;
     private int stageNum;
 
     [SerializeField]
@@ -80,11 +81,17 @@ public class GameManager : MonoBehaviour
         timer += Time.deltaTime;
         timeUi.GetComponent<Text>().text = this.timer.ToString("F1") + "s";
 
-        if (Time.time == goalTime)
+        // ステージクリア判定
+        int survive = this.surviveCount;
+        if (survive > goalCount && currentStage == GameStage.Stage3)
+        {
+            GameClear();
+        }
+        else if (survive >= goalCount)
         {
             SetCurrentState(GameState.MoveStage);
             StageClear();
-        };
+        }
     }
 
     // 次のステージの準備処理
@@ -93,7 +100,7 @@ public class GameManager : MonoBehaviour
         currentStage = stage;
         SetCurrentState(GameState.Gaming);
         StageNumCutIn();
-        goalTime = variable.GoalTime;
+        goalCount = variable.GoalCount;
     }
 
     public void SetCurrentState(GameState state)
@@ -101,20 +108,18 @@ public class GameManager : MonoBehaviour
         currentGameState = state;
     }
 
+    // ステージ移行処理
     void OnGameStageChanged(GameStage currentStage)
     {
         switch (currentStage)
         {
             case GameStage.Stage1:
                 SetStage(GameStage.Stage2);
-                MoveStage();
+                SetUi();
                 break;
             case GameStage.Stage2:
                 SetStage(GameStage.Stage3);
-                MoveStage();
-                break;
-            case GameStage.Stage3:
-
+                SetUi();
                 break;
             default:
                 break;
@@ -124,6 +129,7 @@ public class GameManager : MonoBehaviour
     // ステージクリア演出
     public void StageClear()
     {
+        surviveCount = 0;
         timeUi.SetActive(false);
         stageUi.SetActive(false);
         clearCanvasClone = Instantiate(clearCanvasPrefab);
@@ -136,7 +142,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void MoveStage()
+    public void SetUi()
     {
         timeUi.SetActive(true);
         stageUi.SetActive(true);
@@ -170,7 +176,6 @@ public class GameManager : MonoBehaviour
     {
         Destroy(gameOverCanvasClone);
         SceneManager.LoadScene("Stage1");
-        stageNum = 0;
         Time.timeScale = 1.0f;
     }
 
@@ -181,9 +186,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Title");
     }
 
-    void GameClear()
+    // ゲームクリア処理
+    public void GameClear()
     {
-        print("ゲームクリア");
+        SceneManager.LoadScene("Clear");
     }
 
     /// <summary>

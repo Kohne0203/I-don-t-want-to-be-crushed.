@@ -10,30 +10,30 @@ public class VariableManager : MonoBehaviour
 
     // GameManager関連
 
-    private float goalTime;
+    private int goalCount;
     private int stageNum;
 
-    public float GoalTime
+    public int GoalCount
     {
         get {
             if (gameManager.currentStage == GameManager.GameStage.Stage1)
             {
-                return 30.0f;
+                return 10;
             }
             else if (gameManager.currentStage == GameManager.GameStage.Stage2)
             {
-                return 60.0f;
+                return 10;
             }
             else if (gameManager.currentStage == GameManager.GameStage.Stage3)
             {
-                return 100.0f;
+                return 10;
             }
             else
             {
-                return this.goalTime;
+                return this.goalCount;
             }
         }
-        private set { this.goalTime = value; }
+        private set { this.goalCount = value; }
     }
 
     public int StageNum

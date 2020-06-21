@@ -399,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362601286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0692925, y: 33.614254, z: 317.37683}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   variable: {fileID: 251059862}
   currentGameState: 0
   currentStage: 0
-  stageNum: 0
+  surviveCount: 0
   stageCanvasPrefab: {fileID: 1739151534746088567, guid: 617e29075b2094015a8c74b6efb37979,
     type: 3}
   clearCanvasPrefab: {fileID: 8509527211097184556, guid: 71483e65c89e34f8b91bab5256f24bcc,
@@ -1446,7 +1446,7 @@ GameObject:
   - component: {fileID: 1915564191}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

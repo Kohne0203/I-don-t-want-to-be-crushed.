@@ -45,9 +45,10 @@ public class FallingObjectController : MonoBehaviour
         {
             gameManager.GameOver();
         }
-        else
+        else if (other.gameObject.tag == "Stage")
         {
             Destroy(gameObject);
+            gameManager.surviveCount += 1;
         }
     }
 }
