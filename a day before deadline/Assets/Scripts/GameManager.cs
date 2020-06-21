@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 
         // ステージクリア判定
         int survive = this.surviveCount;
-        if (survive > goalCount && currentStage == GameStage.Stage3)
+        if (survive >= goalCount && currentStage == GameStage.Stage3)
         {
             GameClear();
         }

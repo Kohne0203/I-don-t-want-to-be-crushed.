@@ -24,7 +24,6 @@ public class TitleManager : MonoBehaviour
     void GameStart()
     {
         SceneManager.LoadScene("Stage1");
-        gameManager.SetStage(GameManager.GameStage.Stage1);
     }
 
     
