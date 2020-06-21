@@ -23,7 +23,8 @@ public class AudioController : MonoBehaviour
         {
             bgm1.enabled = false;
             bgm2.enabled = true;
-        } else
+        }
+        else
         {
             bgm1.enabled = true;
             bgm2.enabled = false;
