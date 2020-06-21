@@ -56,11 +56,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AudioController.cs" />
+     <Compile Include="Assets\Scripts\ClearManager.cs" />
      <Compile Include="Assets\Scripts\FallingObjectController.cs" />
      <Compile Include="Assets\Scripts\FallingObjectGenerator.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\SceneController.cs" />
      <Compile Include="Assets\Scripts\TitleManager.cs" />
      <Compile Include="Assets\Scripts\VariableManager.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
