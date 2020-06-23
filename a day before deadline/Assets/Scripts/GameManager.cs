@@ -66,7 +66,6 @@ public class GameManager : MonoBehaviour
         this.stageUi = GameObject.Find("CurrentStage");
 
         Text timeText = this.timeUi.GetComponent<Text>();
-        timeText.color = White;
     }
 
     // Update is called once per frame
@@ -75,7 +74,6 @@ public class GameManager : MonoBehaviour
         // stageUIの更新
         Text stageText = this.stageUi.GetComponent<Text>();
         stageText.text = "Stage" + stageNum;
-        stageText.color = White;
 
         // timeUIの更新
         timer += Time.deltaTime;
