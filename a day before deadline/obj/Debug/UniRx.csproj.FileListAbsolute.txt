@@ -333,3 +333,4 @@
 /Users/ko/GitHub/A-Day-Before-Deadline/a day before deadline/obj/Debug/UniRx.csproj.CopyComplete
 /Users/ko/GitHub/A-Day-Before-Deadline/a day before deadline/obj/Debug/UniRx.dll
 /Users/ko/GitHub/A-Day-Before-Deadline/a day before deadline/obj/Debug/UniRx.pdb
+/Users/ko/GitHub/A-Day-Before-Deadline/a day before deadline/obj/Debug/UniRx.csproj.CoreCompileInputs.cache

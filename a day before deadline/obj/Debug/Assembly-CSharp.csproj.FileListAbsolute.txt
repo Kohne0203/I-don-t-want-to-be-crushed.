@@ -1,0 +1,2 @@
+/Users/ko/GitHub/A-Day-Before-Deadline/a day before deadline/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/ko/GitHub/A-Day-Before-Deadline/a day before deadline/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

@@ -1564,7 +1564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163385045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: 2}
+  m_LocalPosition: {x: -5, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 615704177}
@@ -1735,7 +1735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481638158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: 2}
+  m_LocalPosition: {x: 5, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 615704177}
@@ -1850,7 +1850,6 @@ MonoBehaviour:
   Train:
   - {fileID: 2383798520664929738, guid: 18633a42707d1426cb6809e9885a9154, type: 3}
   - {fileID: 2383798520664929738, guid: 884ac89c59a61410094aa2873bf97902, type: 3}
-  - {fileID: 2383798520664929738, guid: 8b276d37950224a86a8148f5b64e7a07, type: 3}
   playerPos: {x: 0, y: 0, z: 0}
   gameManager: {fileID: 1261800436}
   variable: {fileID: 251059862}
