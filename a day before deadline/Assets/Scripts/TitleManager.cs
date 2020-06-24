@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
+    //　タイトル画面
+
     Button startButton;
     GameManager gameManager;
     

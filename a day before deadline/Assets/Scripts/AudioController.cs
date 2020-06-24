@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
+    // 音を管理するスクリプト
 
-    AudioSource bgm1;
-    AudioSource bgm2;
+    private AudioSource bgm1;
+    private AudioSource bgm2;
     public GameManager gameManager;
 
     // Start is called before the first frame update

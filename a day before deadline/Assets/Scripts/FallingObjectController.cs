@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class FallingObjectController : MonoBehaviour
 {
-    public float fallSpeed;
-    public float waitTime;
-    public Rigidbody rb;
-    GameObject character;
+    // 落下オブジェクトの挙動に関するスクリプト
 
+    public Rigidbody rb;
     public GameManager gameManager;
     public VariableManager variable;
+
+    private float fallSpeed;
+    private float waitTime;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         variable = GameObject.Find("VariableManager").GetComponent<VariableManager>();
-        character = GameObject.Find("unitychan");
-
+    
         rb.GetComponent<Rigidbody>();
         rb.isKinematic = true;
 

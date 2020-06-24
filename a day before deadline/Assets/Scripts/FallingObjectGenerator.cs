@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class FallingObjectGenerator : MonoBehaviour
 {
+    //落下オブジェクトの生成に関するスクリプト
 
-    public GameObject[] Train;
-    float span;
-    float delta = 0;
     public Vector3 playerPos;
-    int invokeTime;
+    public GameObject[] Train;
+    private float span;
+    private float delta = 0;
+    private int invokeTime;
 
     public GameManager gameManager;
     public VariableManager variable;
@@ -48,10 +49,5 @@ public class FallingObjectGenerator : MonoBehaviour
                 Destroy(go);
             }
         }
-    }
-
-    public void GenerateDestroy()
-    {
-
     }
 }
