@@ -29,7 +29,10 @@ public class FallingObjectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(gameManager.currentGameState == GameManager.GameState.MoveStage)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Fall()

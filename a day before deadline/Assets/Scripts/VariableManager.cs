@@ -7,7 +7,7 @@ public class VariableManager : MonoBehaviour
     // 各変数,プロパティをまとめるスクリプト
 
     public GameManager gameManager;
-
+    
     // GameManager関連
 
     private int goalCount;
@@ -22,11 +22,11 @@ public class VariableManager : MonoBehaviour
             }
             else if (gameManager.currentStage == GameManager.GameStage.Stage2)
             {
-                return 10;
+                return 30;
             }
             else if (gameManager.currentStage == GameManager.GameStage.Stage3)
             {
-                return 10;
+                return 50;
             }
             else
             {
@@ -68,9 +68,13 @@ public class VariableManager : MonoBehaviour
     {
         get
         {
-            if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            if (gameManager.currentStage == GameManager.GameStage.Stage2)
             {
                 return 7.0f;
+            }
+            else if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            {
+                return 5.0f;
             }
 
             return this.playerSpeed;
@@ -89,22 +93,8 @@ public class VariableManager : MonoBehaviour
     {
         get
         {
-            if (gameManager.currentStage == GameManager.GameStage.Stage1)
-            {
-                return 3.0f;
-            }
-            else if (gameManager.currentStage == GameManager.GameStage.Stage2)
-            {
-                return 2.0f;
-            }
-            else if (gameManager.currentStage == GameManager.GameStage.Stage3)
-            {
-                return 1.0f;
-            }
-            else
-            {
-                return this.fallSpan;
-            }
+            float random = Random.Range(1.0f, 3.0f);
+            return random;
         }
         private set { this.fallSpan = value; }
     }
@@ -119,9 +109,9 @@ public class VariableManager : MonoBehaviour
     {
         get
         {
-            if (gameManager.currentStage == GameManager.GameStage.Stage3)
+            if (gameManager.currentStage == GameManager.GameStage.Stage1)
             {
-                float random = Random.Range(3.0f, 10.0f);
+                float random = Random.Range(10.0f, 20.0f);
                 return random;
             }
 
@@ -134,21 +124,13 @@ public class VariableManager : MonoBehaviour
     {
         get
         {
-            if (gameManager.currentStage == GameManager.GameStage.Stage1)
-            {
-                return 3.0f;
-            }
-            else if (gameManager.currentStage == GameManager.GameStage.Stage2)
+            if (gameManager.currentStage != GameManager.GameStage.Stage1)
             {
                 return 2.0f;
             }
-            else if (gameManager.currentStage == GameManager.GameStage.Stage3)
-            {
-                return 1.0f;
-            }
             else
             {
-                return this.fallSpan;
+                return this.waitTime;
             }
         }
         private set { this.waitTime = value; }

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     float speed;
     public float horizontalInput;
-    public float xRange = 7.0f;
+    public float xRange = 5.0f;
     public DirectionController2d controller;
     public VariableManager variable;
 
