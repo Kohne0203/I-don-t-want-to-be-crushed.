@@ -1,2 +1,2 @@
-# A-Day-Before-Deadline
-原稿締切前日
+# I don't want to be crushed.
+AoE避けゲー
