@@ -472,70 +472,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362601286}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5457153, y: 61.08242, z: -327.18744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1261800435}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &394390572
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_Name
-      value: road_straight_mesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9054c70a5c9ed454f8ef48a11963db28, type: 3}
 --- !u!1 &419978649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1160,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1492,8 +1435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa047c13dab40433d9a3d0b521fc944e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: 0
-  xRange: 7
   controller: {fileID: 1148846861}
   variable: {fileID: 251059862}
 --- !u!54 &1148846860
@@ -1847,10 +1788,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf912f882b954424eb38fea0437e2da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {x: 0, y: 0, z: 0}
   Train:
   - {fileID: 2383798520664929738, guid: 18633a42707d1426cb6809e9885a9154, type: 3}
   - {fileID: 2383798520664929738, guid: 884ac89c59a61410094aa2873bf97902, type: 3}
-  playerPos: {x: 0, y: 0, z: 0}
   gameManager: {fileID: 1261800436}
   variable: {fileID: 251059862}
 --- !u!4 &1823179519
@@ -2147,7 +2088,7 @@ RectTransform:
   - {fileID: 872693105}
   - {fileID: 752823814}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

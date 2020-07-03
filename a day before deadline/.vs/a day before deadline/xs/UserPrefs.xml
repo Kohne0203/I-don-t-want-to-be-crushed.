@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AudioController.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="16" Column="5" IsPinned="True" />
-      <File FileName="Assets/Scripts/VariableManager.cs" />
-      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" />
-      <File FileName="Assets/Scripts/FallingObjectController.cs" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AudioController.cs" />
-      <File FileName="Assets/Scripts/TitleManager.cs" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="9" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/VariableManager.cs" Line="97" Column="27" />
+      <File FileName="Assets/Scripts/FallingObjectGenerator.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/FallingObjectController.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="76" Column="45" />
+      <File FileName="Assets/Scripts/AudioController.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/TitleManager.cs" Line="10" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +16,7 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="GameManager.cs" selected="True" />
+                  <Node name="AudioController.cs" selected="True" />
                 </Node>
                 <Node name="unity-chan!" expanded="True" />
               </Node>

@@ -1076,4 +1076,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Title.unity
   - Assets/Scenes/Stage1.unity
   - Assets/Scenes/Clear.unity
-  playerPath: /Users/ko/GitHub/20200623 -ver.1.0.0
+  playerPath: /Users/ko/Build/20200624 -ver.1.0.1
